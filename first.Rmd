@@ -17,6 +17,6 @@ summary(dat)
 
 ## データの図示
 調査した村と慎重の関係を図示してみる。
-```{r plotting, fig.keep = 'all', dev = 'png'}
+```{r plotting}
 with(dat, plot(height ~ village))
 ```
