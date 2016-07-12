@@ -1,0 +1,22 @@
+---
+title: "最初の1歩"
+author: "Shouhei TAKEUCHI"
+date: "2016年7月12日"
+output: word_document
+---
+
+# 私の研究
+survey.csvに入力したデータを用いて、いろいろな解析を行ってみる。
+
+## データの読み込み
+データの読み込みを行う。
+```{r reading}
+dat <- read.csv("data/survey.csv", na.strings = "")
+summary(dat)
+```
+
+## データの図示
+調査した村と慎重の関係を図示してみる。
+```{r plotting, fig.keep = 'all', dev = 'png'}
+with(dat, plot(height ~ village))
+```
